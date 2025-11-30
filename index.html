@@ -6,6 +6,235 @@
     <title>Mi Portafolio | Estudiante de Ingeniería en Computación</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            color: white;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin: 0 10px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 24px;
+            width: 30px;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            background-color: white;
+            height: 4px;
+            width: 30px;
+            border-radius: 4px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: #f4f4f4;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+        }
+
+        .hero-buttons {
+            margin-top: 20px;
+        }
+
+        .hero-buttons .btn {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin: 5px;
+        }
+
+        .hero-buttons .btn-secondary {
+            background-color: #6c757d;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: flex;
+            gap: 20px;
+        }
+
+        .about-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .project-card {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .project-image {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        .tech-tags {
+            display: flex;
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        .tech-tags span {
+            background-color: #007BFF;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+
+        .project-link {
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .project-link i {
+            margin-right: 5px;
+        }
+
+        /* Contact Section */
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-card {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-card i {
+            font-size: 1.5rem;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background-color: #333;
+                width: 200px;
+                padding: 20px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .about-grid {
+                flex-direction: column;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .hero-buttons .btn {
+                padding: 8px 16px;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navegación -->
@@ -76,7 +305,6 @@
         <div class="container">
             <h2 class="section-title">Proyectos</h2>
             <div class="projects-grid">
-                <!-- Proyecto 1 -->
                 <div class="project-card">
                     <img src="assets/pokemon.jpg" alt="Pokemon java" class="project-image">
                     <div class="project-content">
@@ -85,70 +313,4 @@
                         <div class="tech-tags">
                             <span>Java</span>
                         </div>
-                        <a href="https://github.com/andresaguero9/syntax-error.git" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> Ver en GitHub
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Proyecto 2 -->
-                <div class="project-card">
-                    <img src="assets/tetris.png" alt="Tetris" class="project-image">
-                    <div class="project-content">
-                        <h3>Tetris</h3>
-                        <p>Juego de tetris con nuevas reglas.</p>
-                        <div class="tech-tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                            <span>Local Storage</span>
-                        </div>
-                        <a href="https://github.com/andresaguero9/tetris.git" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> Ver en GitHub
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección Contacto -->
-    <section id="contacto" class="contact">
-        <div class="container">
-            <h2 class="section-title">Contacto</h2>
-            <p class="contact-intro">¿Tienes un proyecto en mente o quieres colaborar? ¡Contáctame!</p>
-            <div class="contact-links">
-                <a href="mailto:juan.dev@example.com" class="contact-card">
-                    <i class="fas fa-envelope"></i>
-                    <span>juan.dev@example.com</span>
-                </a>
-                <a href="https://github.com/usuario" target="_blank" class="contact-card">
-                    <i class="fab fa-github"></i>
-                    <span>GitHub</span>
-                </a>
-                <a href="https://linkedin.com/in/usuario" target="_blank" class="contact-card">
-                    <i class="fab fa-linkedin"></i>
-                    <span>LinkedIn</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Juan Desarrollador. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-
-    <!-- Agregar este script para que el menú hamburguesa funcione -->
-    <script>
-        document.getElementById('menuToggle').addEventListener('click', function() {
-            const navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('active');
-        });
-    </script>
-
-    <script src="scripts/main.js"></script>
-</body>
-</html>
+                        <a href="https://github.com/andresaguero9/syntax-error.git" target="_blank" class
