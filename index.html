@@ -116,4 +116,39 @@
     <section id="contacto" class="contact">
         <div class="container">
             <h2 class="section-title">Contacto</h2>
-            <p class="contact-intro">¿Tienes un proyecto en mente o quieres colaborar? ¡Contácta
+            <p class="contact-intro">¿Tienes un proyecto en mente o quieres colaborar? ¡Contáctame!</p>
+            <div class="contact-links">
+                <a href="mailto:juan.dev@example.com" class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <span>juan.dev@example.com</span>
+                </a>
+                <a href="https://github.com/usuario" target="_blank" class="contact-card">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://linkedin.com/in/usuario" target="_blank" class="contact-card">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Juan Desarrollador. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Agregar este script para que el menú hamburguesa funcione -->
+    <script>
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        });
+    </script>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
