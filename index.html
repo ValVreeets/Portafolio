@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio | Estudiante de Ingeniería en Computación</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">Mi Portafolio</div>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre-mi">Sobre Mí</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Hero / Inicio -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="profile-image">
+                    <div class="avatar">JD</div>
+                </div>
+                <h1 class="hero-title">Juan Desarrollador</h1>
+                <p class="hero-subtitle">Estudiante de Ingeniería en Computación</p>
+                <div class="hero-buttons">
+                    <a href="#contacto" class="btn btn-primary">Contáctame</a>
+                    <a href="#proyectos" class="btn btn-secondary">Ver Proyectos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Sobre Mí -->
+    <section id="sobre-mi" class="about">
+        <div class="container">
+            <h2 class="section-title">Sobre Mí</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3>Acerca de</h3>
+                    <p>
+                        Soy estudiante de Ingeniería en Computación en la Universidad de Costa Rica, 
+                        apasionado por el desarrollo de software y la resolución de problemas mediante 
+                        la tecnología. Me especializo en desarrollo web y programación, siempre buscando 
+                        aprender nuevas tecnologías y metodologías para crear soluciones innovadoras y eficientes.
+                    </p>
+                </div>
+                <div class="about-card">
+                    <h3>Habilidades</h3>
+                    <div class="skills-container">
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Proyectos -->
+    <section id="proyectos" class="projects">
+        <div class="container">
+            <h2 class="section-title">Proyectos</h2>
+            <div class="projects-grid">
+                <!-- Proyecto 1 -->
+                <div class="project-card">
+                    <img src="assets/calculadora.jpg" alt="Calculadora en JavaScript" class="project-image">
+                    <div class="project-content">
+                        <h3>Calculadora en JavaScript</h3>
+                        <p>Aplicación web interactiva que realiza operaciones matemáticas básicas 
+                           con una interfaz intuitiva y responsiva.</p>
+                        <div class="tech-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <a href="https://github.com/usuario/calculadora" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> Ver en GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2 -->
+                <div class="project-card">
+                    <img src="assets/gestor-tareas.jpg" alt="Sistema de Gestión de Tareas" class="project-image">
+                    <div class="project-content">
+                        <h3>Sistema de Gestión de Tareas</h3>
+                        <p>Aplicación para organizar y dar seguimiento a tareas pendientes con 
+                           funcionalidad de filtrado y ordenamiento.</p>
+                        <div class="tech-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Local Storage</span>
+                        </div>
+                        <a href="https://github.com/usuario/gestor-tareas" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> Ver en GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Proyecto 3 -->
+                <div class="project-card">
+                    <img src="assets/conversor.jpg" alt="Conversor de Unidades" class="project-image">
+                    <div class="project-content">
+                        <h3>Conversor de Unidades</h3>
+                        <p>Herramienta web para convertir entre diferentes unidades de medida 
+                           incluyendo temperatura, longitud y peso.</p>
+                        <div class="tech-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <a href="https://github.com/usuario/conversor" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> Ver en GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <p class="contact-intro">¿Tienes un proyecto en mente o quieres colaborar? ¡Contáctame!</p>
+            <div class="contact-links">
+                <a href="mailto:juan.dev@example.com" class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <span>juan.dev@example.com</span>
+                </a>
+                <a href="https://github.com/usuario" target="_blank" class="contact-card">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://linkedin.com/in/usuario" target="_blank" class="contact-card">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Juan Desarrollador. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
