@@ -6,6 +6,75 @@
     <title>Mi Portafolio | Estudiante de Computación</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Estilos específicos para la galería */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .foto {
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .foto img {
+            width: 100%;
+            height: 200px; /* Ajusta el tamaño aquí */
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .foto img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Estilos Lightbox */
+        .lightbox-modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding-top: 60px;
+        }
+
+        .lightbox-modal-content {
+            margin: auto;
+            display: block;
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #caption {
+            text-align: center;
+            padding: 10px 0;
+            color: white;
+            font-size: 18px;
+        }
+    </style>
 </head>
 <body>
     <!-- Navegación -->
@@ -22,6 +91,7 @@
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#sobre-mi">Sobre Mí</a></li>
                     <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#galeria">Galería</a></li> <!-- Nuevo enlace a la galería -->
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </div>
@@ -35,7 +105,7 @@
                 <div class="profile-image">
                     <img src="assets/fotoperfil.png" alt="fotoperfil" class="profile-pic">
                 </div>
-                <h1 class="hero-title">Bryan Jiménez</h1>
+                <h1 class="hero-title">Valeria Vargas Acosta</h1>
                 <p class="hero-subtitle">Estudiante de Computación</p>
                 <div class="hero-buttons">
                     <a href="#contacto" class="btn btn-primary">Contáctame</a>
@@ -53,9 +123,9 @@
                 <div class="about-card">
                     <h3>Acerca de</h3>
                     <p>
-                        Soy estudiante de Computación en la Universidad de Costa Rica, 
-						desde pequeño me ha gustado todo el mundo de la Computación, estoy en proceso de desarrollo,
-						pero mi principal interés es acerca de la ciberseguridad.
+                        Estudiante de computación de la Universidad Nacional de Costa Rica. 
+                        Bases fuertes en Español, Inglés y Japonés.
+                        2 años de experiencia laboral corporativa en el extranjero en Animación Digital.
                     </p>
                 </div>
                 <div class="about-card">
@@ -63,7 +133,7 @@
                     <div class="skills-container">
                         <span class="skill-tag">Java</span>
                         <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Bash</span>
+                        <span class="skill-tag">Clip Studio Clip</span>
                         <span class="skill-tag">GitHub</span>
                     </div>
                 </div>
@@ -107,17 +177,50 @@
                 </div>
                 <!-- Proyecto 3 -->
                 <div class="project-card">
-                    <img src="assets/outfit.png" alt="Outfit" class="project-image">
+                    <img src="assets/gato.png" alt="Gato" class="project-image">
                     <div class="project-content">
-                        <h3>Admistración de outfits</h3>
-                        <p>Un programa que te ayuda a administrar que outfit armar sin repetir</p>
+                        <h3>Juego de Gato</h3>
+                        <p>Juego para jugar el clásico juego de gato en terminal</p>
                         <div class="tech-tags">
                             <span>Java</span>
                         </div>
-                        <a href="https://github.com/Bryan-JV/Administrador-de-Outifits" target="_blank" class="project-link">
+                        <a href="https://github.com/ValVreeets/personal/tree/main/Gato" target="_blank" class="project-link">
                             <i class="fab fa-github"></i> Ver en GitHub
                         </a>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Galería -->
+    <section id="galeria" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Galería de Imágenes</h2>
+            <div class="gallery-grid">
+                <!-- Imagen 1 -->
+                <div class="foto">
+                    <a href="assets/foto1.jpg" class="lightbox">
+                        <img src="assets/foto1.jpg" alt="">
+                    </a>
+                </div>
+                <!-- Imagen 2 -->
+                <div class="foto">
+                    <a href="assets/foto2.jpg" class="lightbox">
+                        <img src="assets/foto2.jpg" alt="">
+                    </a>
+                </div>
+                <!-- Imagen 3 -->
+                <div class="foto">
+                    <a href="assets/foto3.jpg" class="lightbox">
+                        <img src="assets/foto3.jpg" alt="">
+                    </a>
+                 </div>
+                <!-- Imagen 2 -->
+                <div class="foto">
+                    <a href="assets/foto4.jpg" class="lightbox">
+                        <img src="assets/foto4.jpg" alt="">
+                    </a>
                 </div>
             </div>
         </div>
@@ -129,11 +232,11 @@
             <h2 class="section-title">Contacto</h2>
             <p class="contact-intro">¿Tienes un proyecto en mente o quieres colaborar? ¡Contáctame!</p>
             <div class="contact-links">
-                <a href="mailto:bryanjv0206@gmail.com" class="contact-card">
+                <a href="mailto:vreeets@hotmail.com" class="contact-card">
                     <i class="fas fa-envelope"></i>
-                    <span>bryanjv0206@gmail</span>
+                    <span>vreeets@hotmail.com</span>
                 </a>
-                <a href="https://github.com/Bryan-JV" target="_blank" class="contact-card">
+                <a href="https://github.com/ValVreeets" target="_blank" class="contact-card">
                     <i class="fab fa-github"></i>
                     <span>GitHub</span>
                 </a>
@@ -144,10 +247,44 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Bryan Jiménez. Todos los derechos reservados.</p>
+            <p>&copy; 2025 Valeria Vargas. Todos los derechos reservados.</p>
         </div>
     </footer>
 
     <script src="scripts/main.js"></script>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" class="lightbox-modal">
+        <span class="close">&times;</span>
+        <img class="lightbox-modal-content" id="lightbox-img">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        const modal = document.getElementById("lightbox-modal");
+        const lightboxImgs = document.querySelectorAll(".lightbox");
+        const modalImg = document.getElementById("lightbox-img");
+        const captionText = document.getElementById("caption");
+        const closeBtn = document.getElementsByClassName("close")[0];
+
+        lightboxImgs.forEach(img => {
+            img.onclick = function(event) {
+                event.preventDefault();
+                modal.style.display = "block";
+                modalImg.src = this.href;
+                captionText.innerHTML = this.children[0].alt;
+            };
+        });
+
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        };
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+    </script>
 </body>
 </html>
