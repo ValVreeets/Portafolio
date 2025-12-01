@@ -89,14 +89,27 @@ body {
     background: none;
     border: none;
     cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
 }
-
 .menu-toggle span {
     width: 25px;
     height: 3px;
     background: var(--text-light);
     border-radius: 2px;
     transition: all 0.3s ease;
+}
+/* Animación del menú hamburguesa */
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
 }
 
 /* ============================================
@@ -117,6 +130,14 @@ body {
 
 .profile-image {
     margin-bottom: 2rem;
+}
+
+.profile-pic {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
 .avatar {
@@ -412,18 +433,36 @@ body {
         top: 70px;
         left: -100%;
         width: 100%;
+        height: calc(100vh - 70px);
         flex-direction: column;
         background: rgba(15, 23, 42, 0.98);
         padding: 2rem;
-        gap: 1rem;
+        gap: 1.5rem;
         transition: left 0.3s ease;
         border-bottom: 1px solid var(--border-color);
+        overflow-y: auto;
+        z-index: 999;
     }
 
     .nav-links.active {
         left: 0;
     }
 
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 1rem;
+        text-align: center;
+        font-size: 1.2rem;
+        border-radius: 8px;
+    }
+
+    .nav-links a:hover {
+        background: rgba(59, 130, 246, 0.1);
+    }
     .menu-toggle {
         display: flex;
     }
